@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Quality Control Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Development Quality Control Checker</h1>
+            <p>Use this tool to ensure your code meets quality standards</p>
+        </header>
+        
+        <main>
+            <section class="checklist-section">
+                <h2>HTML Checks</h2>
+                <ul class="checklist" id="html-checklist">
+                    <li><input type="checkbox" id="doctype"><label for="doctype">DOCTYPE declaration is present</label></li>
+                    <li><input type="checkbox" id="lang"><label for="lang">HTML has lang attribute</label></li>
+                    <li><input type="checkbox" id="meta-charset"><label for="meta-charset">Meta charset is defined</label></li>
+                    <li><input type="checkbox" id="meta-viewport"><label for="meta-viewport">Meta viewport is defined</label></li>
+                    <li><input type="checkbox" id="semantic"><label for="semantic">Uses semantic HTML elements (header, main, footer, etc.)</label></li>
+                    <li><input type="checkbox" id="alt-text"><label for="alt-text">All images have descriptive alt text</label></li>
+                    <li><input type="checkbox" id="heading-order"><label for="heading-order">Heading hierarchy is correct (h1 → h2 → h3)</label></li>
+                    <li><input type="checkbox" id="links-valid"><label for="links-valid">All links have valid href attributes</label></li>
+                </ul>
+                
+                <h2>CSS Checks</h2>
+                <ul class="checklist" id="css-checklist">
+                    <li><input type="checkbox" id="color-syntax"><label for="color-syntax">Color syntax is valid (no quotes around color names)</label></li>
+                    <li><input type="checkbox" id="font-family"><label for="font-family">Font-family declarations are consistent</label></li>
+                    <li><input type="checkbox" id="units-consistent"><label for="units-consistent">Units are used consistently (px, em, rem, etc.)</label></li>
+                    <li><input type="checkbox" id="contrast"><label for="contrast">Color contrast is sufficient for accessibility</label></li>
+                    <li><input type="checkbox" id="responsive"><label for="responsive">Design is responsive/mobile-friendly</label></li>
+                    <li><input type="checkbox" id="selector-specificity"><label for="selector-specificity">Selector specificity is appropriate</label></li>
+                </ul>
+                
+                <h2>General Checks</h2>
+                <ul class="checklist" id="general-checklist">
+                    <li><input type="checkbox" id="indentation"><label for="indentation">Code indentation is consistent</label></li>
+                    <li><input type="checkbox" id="comments"><label for="comments">Code has appropriate comments</label></li>
+                    <li><input type="checkbox" id="file-structure"><label for="file-structure">Files are properly organized</label></li>
+                </ul>
+            </section>
+            
+            <section class="results-section">
+                <h2>Results</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="completed-count">0/17 checks completed</p>
+                <p id="status-message">Complete the checklist to see your status.</p>
+                <button id="reset-btn">Reset Checklist</button>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
