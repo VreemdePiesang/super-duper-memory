@@ -2,6 +2,8 @@
 
 A simple, interactive tool to help web developers ensure their code follows best practices and quality standards.
 
+[To view This Page Use: (https://vreemdepiesang.github.io/super-duper-memory/)]
+
 ![Web Dev QC Checker Screenshot](liveimg.png)
 
 ## Overview
