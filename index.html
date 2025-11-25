@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive web development quality control checker to ensure your HTML, CSS, and JavaScript code meets best practices and quality standards.">
     <title>Web Dev Quality Control Checker</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,9 +15,9 @@
         </header>
         
         <main>
-            <section class="checklist-section">
-                <h2>HTML Checks</h2>
-                <ul class="checklist" id="html-checklist">
+            <section class="checklist-section" aria-labelledby="html-checks-heading">
+                <h2 id="html-checks-heading">HTML Checks</h2>
+                <ul class="checklist" id="html-checklist" role="list">
                     <li><input type="checkbox" id="doctype"><label for="doctype">DOCTYPE declaration is present</label></li>
                     <li><input type="checkbox" id="lang"><label for="lang">HTML has lang attribute</label></li>
                     <li><input type="checkbox" id="meta-charset"><label for="meta-charset">Meta charset is defined</label></li>
@@ -26,9 +27,9 @@
                     <li><input type="checkbox" id="heading-order"><label for="heading-order">Heading hierarchy is correct (h1 → h2 → h3)</label></li>
                     <li><input type="checkbox" id="links-valid"><label for="links-valid">All links have valid href attributes</label></li>
                 </ul>
-                
-                <h2>CSS Checks</h2>
-                <ul class="checklist" id="css-checklist">
+
+                <h2 id="css-checks-heading">CSS Checks</h2>
+                <ul class="checklist" id="css-checklist" role="list" aria-labelledby="css-checks-heading">
                     <li><input type="checkbox" id="color-syntax"><label for="color-syntax">Color syntax is valid (no quotes around color names)</label></li>
                     <li><input type="checkbox" id="font-family"><label for="font-family">Font-family declarations are consistent</label></li>
                     <li><input type="checkbox" id="units-consistent"><label for="units-consistent">Units are used consistently (px, em, rem, etc.)</label></li>
@@ -36,27 +37,33 @@
                     <li><input type="checkbox" id="responsive"><label for="responsive">Design is responsive/mobile-friendly</label></li>
                     <li><input type="checkbox" id="selector-specificity"><label for="selector-specificity">Selector specificity is appropriate</label></li>
                 </ul>
-                
-                <h2>General Checks</h2>
-                <ul class="checklist" id="general-checklist">
+
+
+                <h2 id="general-checks-heading">General Checks</h2>
+                <ul class="checklist" id="general-checklist" role="list" aria-labelledby="general-checks-heading">
                     <li><input type="checkbox" id="indentation"><label for="indentation">Code indentation is consistent</label></li>
                     <li><input type="checkbox" id="comments"><label for="comments">Code has appropriate comments</label></li>
                     <li><input type="checkbox" id="file-structure"><label for="file-structure">Files are properly organized</label></li>
                 </ul>
             </section>
-            
-            <section class="results-section">
-                <h2>Results</h2>
-                <div class="progress-container">
+
+
+            <section class="results-section" aria-labelledby="results-heading">
+                <h2 id="results-heading">Results</h2>
+                <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quality control progress">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <p id="completed-count">0/17 checks completed</p>
-                <p id="status-message">Complete the checklist to see your status.</p>
-                <button id="reset-btn">Reset Checklist</button>
+                <p id="completed-count" aria-live="polite">0/17 checks completed</p>
+                <p id="status-message" aria-live="polite">Complete the checklist to see your status.</p>
+                <button id="reset-btn" aria-label="Reset all checkboxes">Reset Checklist</button>
             </section>
         </main>
+
+        <footer>
+            <p>&copy; 2025 Web Development Quality Control Checker. Created with ❤️ by Vreemde Piesang</p>
+        </footer>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

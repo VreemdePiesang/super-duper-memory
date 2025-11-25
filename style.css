@@ -103,3 +103,99 @@ button:hover {
     margin: 15px 0;
     font-weight: bold;
 }
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Accessibility - Focus styles */
+input[type="checkbox"]:focus,
+button:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+label:focus-within {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Improve checkbox and label interaction */
+.checklist li label {
+    cursor: pointer;
+    flex: 1;
+    user-select: none;
+}
+
+/* Keyboard navigation improvement */
+.checklist li:focus-within {
+    background-color: #e8f4f8;
+}
+
+/* Button active state */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Pulse animation for completion */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .checklist li {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .checklist li {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    input[type="checkbox"] {
+        margin-top: 2px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
