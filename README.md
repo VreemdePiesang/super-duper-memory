@@ -40,7 +40,7 @@ The Web Development Quality Control Checker is a lightweight web application des
 web-dev-qc-checker/
 │
 ├── index.html          # Main HTML structure
-├── styles.css          # CSS styling
+├── style.css           # CSS styling
 ├── script.js           # JavaScript functionality
 └── README.md           # This documentation
 ```
